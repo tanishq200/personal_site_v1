@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tanishq Javvaji Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+.navbar-brand {
+        font-family: "Arial", sans-serif;
+        /* Add other font properties here if needed */
+ }
+
+ .nav-item a {
+        font-family: "Arial", sans-serif;
+        /* Add other font properties here if needed */
+}
+h1 {
+        font-size: 18px; /* Adjust the font size as needed */
+        font-family: "Pacifico", cursive; /* Specify a cursive font family */
+    }
+
+.subheading {
+        font-size: 28px; /* Adjust the font size as needed */
+    }
+
+.title-s {
+  font-weight: bold;
+  color: white;
+}
+.highlight {
+  color: white;
+}
+
+.skill-mf strong {
+        color: white;
+ }
+
+
+
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+			<a class="navbar-brand" href="index.html" style="color: #ffbd39;">TJ</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+				<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.jpg); background-size: 80% auto; background-position: center;">
+					<div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I am <span>Tanishq Javvaji</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+							const typingAnimationElement = document.getElementById('typing-animation');
+							const typingTexts = [
+								'Bachelor of Technology in Electronics and Communication Engineering',
+								'Master of Engineering in Cybersecurity'
+							];
+							
+							function playTypingAnimation(text) {
+								let index = 0;
+								let interval = setInterval(() => {
+									typingAnimationElement.textContent += text[index++];
+									if (index === text.length) {
+										clearInterval(interval);
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, 1000); // Delay before starting the next animation
+									}
+								}, 100); // Speed of typing animation
+							}
+							
+							playTypingAnimation(typingTexts[0]);
+							
+							// Add the following style changes
+							typingAnimationElement.style.fontFamily = 'Arial';
+							typingAnimationElement.style.fontSize = '16px'; // Adjust the size as needed
+							</script>
+							
+
+
+						<br>
+						<br>
+						<h2 style="font-family: 'Roboto', sans-serif; font-weight: bold; color: #ffbd39;">Cybersecurity Enthusiast</h2>
+
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/tanishqjavvaji/" class="btn btn-primary py-3 px-4">linkedin</a> 
+							<a href="https://github.com/tanishq200" class="btn btn-white btn-outline-white py-3 px-4">Github</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.jpeg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Tanishq Javvaji</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Cybersecurity Enthusiast</span></p>
+										<p><span class="title-s">Professional Experience: </span> <span>1 Year</span></p>
+										<p><span class="title-s">Address: </span> <span> United States</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s" style="color: #ffbd39; margin-top: 20px;">Technical Skills</p>
+									<p><strong>Programming Languages:</strong>Python, Bash, SQL, C, C++, C#, Core Java, x86/x64/ARM/MIPS Assembly, PowerShell, JavaScript, HTML</p>
+									<p><strong>Operating Systems:</strong> Windows 10, Kali Linux, Ubuntu, CentOS 5 & 7, Android, iOS, ChromeOS, macOS</p>
+									<p><strong>Domains:</strong> Penetration Testing/Red Teaming, Application Security, Secure Coding, Vulnerability Research, Offensive Security Engineering, Risk Management, Anomaly Detection</p>
+									<p><strong>Active Directory/ Penetration Testing Tools:</strong> Burp Suite, OWASP ZAP, Nessus, Nmap, Rustscan, Metasploit, Hydra, Ffuf, Wfuzz, Gobuster, SQLMap, CyberChef, BloodHound, PowerSploit, CrackMapExec, Impacket Suite, Nikto, Cain & Abel, Bettercap</p>
+									<p><strong>Reverse Engineering/Debugging Tools:</strong>GNU Debugger (+PwnDbg), Ghidra, IDA Pro, Binary Ninja, dnSpy, Cheat Engine, JD-GUI, x64/x86dbg, Angr, ROPGadget/ropper</p>
+									<p><strong>Digital & Network Forensic Tools/VMs:</strong>Foremost, Binwalk, Volatility, Autopsy, Hindsight, Splunk, SIFT Workstation, Wireshark, TCPDump, Tshark, Zeek, Argus, Kibana, Elastic</p>
+									<p><strong>SAST Tools:</strong>CodeQL, Semgrep, Snyk</p>
+									<p><strong>AWS Tools/Services: </strong>EC2, Lambda, S3, DynamoDB, Cloudtrail, Guardduty, WAF & Sheild, IAM, Lambda, Route 53, Simple Email service</p>
+									<p><strong>Certifications:</strong>eLearnSecurity Junior Penetration Tester (eJPT) by eLearnSecurity, Certified Ethical Hacker v11 (CEH) by EC- Council, Junior Penetration Tester by Tryhackme, Offensive Pentesting by Tryhackme, Pursuing Offensive Security Certified Professional (OSCP) </p>
+								</div>						
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4" style="color: #ffbd39;">About Me</h2>
+								
+								<p>
+									As an aspiring Cybersecurity Analyst with a rich educational background, 
+									I hold a Master of Engineering in Cybersecurity from the University of Maryland, 
+									where I achieved a GPA of 3.78, and a Bachelor's in Electronics and Communications Engineering from the Gandhi Institute of Technology 
+									and Management. My expertise is fortified by certifications such as the eLearnSecurity Junior Penetration Tester (eJPT), 
+									and my technical skills span across various programming languages and cybersecurity tools including Python, SQL, AWS, and NIST SP 800-53 frameworks. 
+									In my role as a Graduate Assistant at the University of Maryland, I have effectively enhanced user access controls and security protocols, 
+									significantly mitigating risks. My engagement in Capture the Flag (CTF) competitions underscores my practical cybersecurity skills and problem-solving abilities. 
+									I am keen to apply this comprehensive skill set and hands-on experience to contribute to an organization's cybersecurity defenses and resilience against cyber threats.
+								</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span> Cybersecurity &amp; Offensive security enthusiast </span></li>
+									<li class="d-flex"><span>Education:</span> <span>Master of Engineering, Bachelor of Technology</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Telugu </span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Networking, Volunteering </span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="10">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://github.com/tanishq200" class="btn btn-primary py-3 px-3">Github</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+			  <h2 class="mb-4" style="color: #ffbd39;">Resume</h2>
+            <p>
+				Throughout my tenure at the University of Maryland as a Graduate Assistant and during my internships at Cyvergence.ai and in previous cybersecurity and IT roles, 
+				I have consistently demonstrated my ability to enhance system security, streamline operations, and lead successful technology initiatives. 
+			</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Apr 2023 - May 2024</span>
+						<h2>Graduate Assistant - IT operations </h2>
+						<span class="position">University of Maryland at College Park</span>
+						<p class="mt-4">The University of Maryland, College Park is a flagship public research university known for its diverse academic programs and strong research initiatives. 
+							<ul>
+								<li>Orchestrated comprehensive user access control measures, conducted routine permission reviews, and enforced strict compliance protocols, reducing unauthorized access risks by 40% and maintaining security standards for a portal with over 500 users. </li>
+								<li>Architected user-friendly automation interface with AWS Lambda/Step Functions to streamline and optimize code usability, reducing operational costs by 30% and routine task time by 60%.</li>
+								<li> Spearheaded the implementation of multi-factor authentication (MFA) for all 1,200 user accounts, enhancing overall system security by reducing the risk of unauthorized access through compromised credentials by 90%, based on industry benchmarks.</li>
+								<li>Deployed and configured a web application firewall (WAF) and DDoS mitigation service, effectively defending against distributed denial-of-service (DDoS) attacks, ensuring</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Mar 2023 - Jun 2023</span>
+						<h2>Cybersecurity Intern - GRC</h2>
+						<span class="position">Cyvergence AI</span>
+						<p class="mt-4">Cyvergence.ai provides cybersecurity solutions and consulting services to enhance digital security and compliance for businesses. 
+							<ul>
+								<li>Conducted NIST 800-53 and CIS risk/compliance assessments identifying over 50 security gaps; managed secure migration of 300+ users to JumpCloud with zero data breaches.</li>
+								<li>Orchestrated the development and update of over 20 cybersecurity policies, standards, and procedures to ensure alignment with evolving regulatory requirements like GDPR, HIPAA, and security frameworks such as NIST CSF, increasing compliance levels by 75% within the 3-month internship period.</li>
+								<li>Drove 95% encryption of user devices, reducing data exposure risks by 80%; achieved and maintained 100% compliance with cybersecurity protocols.</li>
+								<li>Streamlined security awareness training programs, educating over 200 employees on best practices, identifying social engineering tactics, and reinforcing a culture of security vigilance across the organization, resulting in a 75% reduction in successful phishing attempts and a 60% improvement in security awareness scores.</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jun 2021 - Sept 2021</span>
+						<h2>Cybersecurity Intern</h2>
+						<span class="position"> The Sparks Foundation </span>
+						<!-- <p class="mt-4">Capgemini Engineering is a leading organization in technology, research and development consulting and organizational and information technology consulting.  -->
+							<ul>
+								<li>Developed a Python-based vulnerability scanner, identifying over 50 web application vulnerabilities, leading to a 20% increase in application security.</li>
+									<li>Assisted in the formulation and enforcement of security policies, contributing to a 15% improvement in compliance with industry-standard cybersecurity practices.</li>
+									<li>Assisted in converting an existing PowerBuilder code to SQL and Java to support a new Flex application.</li>
+									<li>Participated in the implementation of encryption solutions for secure data transmissions, resulting in a 25% enhancement in data integrity and confidentiality across projects.</li>							
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">June 2020 - Aug 2020</span>
+						<h2>Ethical Hacking Intern </h2>
+						<span class="position">Verzeo</span>
+						<!-- <p class="mt-4">Cadence is a leading EDA and Intelligent System Design provider delivering hardware, software, and IP for electronic design.  -->
+							<ul>
+								<li>Compiled Penetration Testing Reports on 2 vulnerable client sites and reported several highly critical vulnerabilities such as SQL Injection and Remote Command Execution (RCE).</li>
+								<li>Investigated technical aspects of fileless malware, documenting Office macro attacks and in-memory injection of payloads using PowerShell and gained insight into Active Directory engagements</li>
+								<li>Examined manual SQL injection, memory-based exploitation, and local/remote file inclusion attacks on dummy websites and open services on servers and developed scripts to automate exploitation using Python.</li>	
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date"> Aug 2022- May 2024</span>
+    					<h2>Master of Engineering</h2>
+						<h3> Cybersecurity</h3>
+    					<span class="position">University of Maryland at College Park</span>
+    					<p class="mt-4">GPA : 3.78 </p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">June 2018- July 2022</span>
+    					<h2>Bachelor of Technology</h2>
+						<h3> electronics and Communication Engineering</h3>
+    					<span class="position"> Gandhi Institute of Technology and Management </span>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/1yGvupx_LJ7R7KxbmzHlp9ooovX65xmvB/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4" style="color: #ffbd39;">Projects</h2>
+            <p>Below are some projects based on Artificial Intelligence , Cloud Computing, Database Management, Full stack development as well as Data Visualization and Analysis.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/krishnanlavanya/AI-Instructed-Yoga" class="block-20 zoom-effect" style="background-image: url('images/yoga.avif');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/krishnanlavanya/AI-Instructed-Yoga">AI Instructed Yoga</a></h3>
+                <p>This AI instructed yoga app uses BlazePose and other advanced technologies to track the user's body movements during yoga practice. It provides real-time feedback on their poses,
+				   helping them make adjustments to improve their alignment and posture. This feedback aims to enhance the user's overall yoga practice, making it more effective and enjoyable.
+				</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/krishnanlavanya/Resume-Skill-Profile-Matching-Project" class="block-20 zoom-effect" style="background-image: url('images/res.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/krishnanlavanya/Resume-Skill-Profile-Matching-Project">Resume Skill & Profile Matching</a></h3>
+                <p>The project aims to develop a resume skill and profile matching algorithm that helps recruiters find the best suitable match for every job. This algorithm analyzes the skills
+					and qualifications listed in resumes and job descriptions to identify the most relevant candidates for a particular job opening with the match percentage.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/krishnanlavanya/E-Commerce-Power-BI-SalesDashboard" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/krishnanlavanya/E-Commerce-Power-BI-SalesDashboard">Online Sales Analysis using Power BI  </a></h3>
+                <p>
+					The Power BI dashboard designed for a store tracks and analyzes online sales data across the entire database. It utilizes various visualizations in the Power BI platform, such as bar charts
+					,pie charts, line charts, and more, to provide insights into the store's online sales performance. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+	<div class="row d-flex">
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/krishnanlavanya/HangmanGame" class="block-20 zoom-effect" style="background-image: url('images/Hangman.png');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/krishnanlavanya/HangmanGame">Hangman Game</a></h3>
+			  <p>
+				The primary objective of the Hangman game is to guess the hidden word or phrase correctly before running out of attempts. This game is not only fun but also 
+				helps improve vocabulary and word-solving skills. The game is responsive to different window sizes and is built with HTML, CSS3, and vanilla JavaScript
+			  </p>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/krishnanlavanya/Music-and-Mental-Health/tree/main" class="block-20 zoom-effect" style="background-image: url('images/MMH.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/krishnanlavanya/Music-and-Mental-Health/tree/main">Music x Mental Health using AWS</a></h3>
+			  <p>
+				The objective of the Music x Mental Health project is to explore and establish potential correlations between individuals' music preferences
+				and their self-reported mental health status, leveraging AWS services for data storage, querying, visualization, and ETL processes</p>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry">
+			<a href="https://github.com/krishnanlavanya/Personal-Expense-Tracker" class="block-20 zoom-effect" style="background-image: url('images/expense.jpeg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/krishnanlavanya/Personal-Expense-Tracker">Personal Expense Tracker</a></h3>
+			  <p> This Personal helps users manage their finances by allowing them to track their expenses, set reminders, and track their spending habits.
+				It is built using Node.js as the backend language and MongoDB as the database, providing a scalable solution for storing and managing user data.</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="15">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="8">0</strong>
+                <span>Total Academic and Professional experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bgg.webp); background-size: cover;">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve complex cybersecurity problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/tanishq200" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4" style="color: #ffbd39;">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Maryland, United States</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+ 1 (443)-985 4917</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">tanishqj8816@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1lP4kTYuNxJxlg4ZcHFttWicKCpEYbqn_/view?usp=sharing">CLICK HERE</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/8SDwCXWTNHvr3wNU6" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/tanishqjavvaji/"><span class="icon-linkedin"></span></a></li>  
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved, Tanishq Javvaji
+	
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
