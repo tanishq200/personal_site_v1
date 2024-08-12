@@ -1,0 +1,50 @@
+name CICD for GitHub Pages
+
+on
+  push
+    branches
+      - main  # Change this if your default branch is not 'main'
+  pull_request
+
+jobs
+  build
+    runs-on ubuntu-latest
+
+    steps
+    - name Checkout code
+      uses actionscheckout@v3
+
+    - name Set up Node.js
+      uses actionssetup-node@v3
+      with
+        node-version '16' # Specify the Node.js version you're using
+
+    - name Install dependencies
+      run npm install
+
+    - name Build the project
+      run npm run build
+
+    - name Deploy to GitHub Pages
+      uses peaceirisactions-gh-pages@v3
+      with
+        github_token ${{ secrets.GITHUB_TOKEN }}
+        publish_dir .build  # Replace with your build output directory
+
+  test
+    runs-on ubuntu-latest
+
+    steps
+    - name Checkout code
+      uses actionscheckout@v3
+
+    - name Set up Node.js
+      uses actionssetup-node@v3
+      with
+        node-version '16' # Specify the Node.js version you're using
+
+    - name Install dependencies
+      run npm install
+
+    - name Run tests
+      run npm test
